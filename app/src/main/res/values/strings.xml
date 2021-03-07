@@ -10,4 +10,23 @@
       the License.
       -->
     <string name="app_name">AndroidDevChallenge</string>
+
+    <string name="enter_pet">Enter a pet</string>
+    <string name="search_pet">Search for a pet</string>
+    <string name="categories">Categories</string>
+    <string name="distance_label">Distance (%s km)</string>
+    <string name="new_pet_label">%s (%s km)</string>
+
+    <string name="label_profile">Profile</string>
+    <string name="label_home">Home</string>
+    <string name="label_chat">Chat</string>
+    <string name="label_favorite">Favorite</string>
+
+    <string name="newest_pet_title">Newest Pets</string>
+    <string name="adopt_pet_label">Adopt Pet</string>
+    <string name="view_all">View all</string>
+    <string name="years_label">%d Years</string>
+    <string name="weight_label">%d Kg</string>
+    <string name="owner_label">%s Owner</string>
+    <string name="adopt_me">Adopt me</string>
 </resources>

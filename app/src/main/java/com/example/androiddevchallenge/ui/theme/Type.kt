@@ -17,17 +17,31 @@ package com.example.androiddevchallenge.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
+import com.example.androiddevchallenge.R
 
 // Set of Material typography styles to start with
+
+private val NotoSans = FontFamily(
+    Font(R.font.noto_sans_regular),
+    Font(R.font.noto_sans_italic,FontWeight.W500,FontStyle.Italic),
+    Font(R.font.noto_sans_bold,FontWeight.Bold),
+)
+
+private val Ultra = FontFamily(
+    Font(R.font.ultra_regular)
+)
 val typography = Typography(
-    body1 = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.Normal,
-        fontSize = 16.sp
-    )
+    defaultFontFamily = NotoSans,
+//    body1 = TextStyle(
+//        fontFamily = FontFamily.Default,
+//        fontWeight = FontWeight.Normal,
+//        fontSize = 16.sp
+//    )
         /* Other default text styles to override
     button = TextStyle(
         fontFamily = FontFamily.Default,
