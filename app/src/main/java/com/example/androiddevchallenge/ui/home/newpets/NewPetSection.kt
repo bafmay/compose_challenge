@@ -1,6 +1,7 @@
 package com.example.androiddevchallenge.ui.home.newpets
 
 import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -20,11 +21,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import coil.compose.rememberImagePainter
 import com.example.androiddevchallenge.R
 import com.example.androiddevchallenge.ui.home.ui.TitleSection
 import com.example.androiddevchallenge.utils.PuppyDataManager
 import com.example.androiddevchallenge.utils.ThemedPreview
-import dev.chrisbanes.accompanist.coil.CoilImage
 
 @Composable
 fun NewPetSection(newpets: List<NewPet>, onItemClick: (NewPet) -> Unit) {
@@ -55,12 +56,11 @@ fun NewPetItem(pet: NewPet, onItemClick: () -> Unit) {
             .clickable(onClick = onItemClick),
         border = BorderStroke(width = 1.dp, color = Color.Black)
     ) {
-        CoilImage(
-            data = pet.url,
+        Image(
+            painter = rememberImagePainter(pet.url),
             contentDescription = null,
             modifier = Modifier.height(200.dp),
             contentScale = ContentScale.Crop,
-            loading = {}
         )
         Column(
             modifier = Modifier

@@ -1,5 +1,6 @@
 package com.example.androiddevchallenge.ui.onboarding
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -15,12 +16,12 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import coil.compose.rememberImagePainter
 import com.example.androiddevchallenge.ui.theme.MyTheme
 import com.example.androiddevchallenge.utils.PageIndicator
 import com.example.androiddevchallenge.utils.Pager
 import com.example.androiddevchallenge.utils.PagerState
 import com.example.androiddevchallenge.utils.PuppyDataManager
-import dev.chrisbanes.accompanist.coil.CoilImage
 
 @Composable
 fun OnBoardingScreen(
@@ -95,12 +96,11 @@ fun OnBoardingItem(
         verticalArrangement = Arrangement.Center,
 
         ) {
-        CoilImage(
-            data = item?.url.orEmpty(),
+        Image(
+            painter= rememberImagePainter( item?.url.orEmpty()),
             contentDescription = null,
             modifier = Modifier
-                .size(width = 250.dp, height = 250.dp),
-            loading = {}
+                .size(width = 250.dp, height = 250.dp)
         )
         Text(
             text = item?.title.orEmpty(),

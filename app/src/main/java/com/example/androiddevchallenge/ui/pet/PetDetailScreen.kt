@@ -1,5 +1,6 @@
 package com.example.androiddevchallenge.ui.pet
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -19,6 +20,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
+import coil.compose.rememberImagePainter
 import com.example.androiddevchallenge.R
 import com.example.androiddevchallenge.ui.common.ContactButton
 import com.example.androiddevchallenge.ui.common.LargeButton
@@ -28,7 +30,6 @@ import com.example.androiddevchallenge.ui.pet.ui.OwnerContact
 import com.example.androiddevchallenge.ui.pet.ui.PetDescription
 import com.example.androiddevchallenge.ui.pet.ui.PetInfoDetail
 import com.example.androiddevchallenge.utils.*
-import dev.chrisbanes.accompanist.coil.CoilImage
 
 @ExperimentalMaterialApi
 @Composable
@@ -68,11 +69,10 @@ fun PetGalleryPager(pet: Pet, onBackPressed: () -> Unit) {
                 },
         ) {
             val item = pet.images[page]
-            CoilImage(
-                data = item,
+            Image(
+                painter = rememberImagePainter(item),
                 contentDescription = null,
-                contentScale = ContentScale.Crop,
-                loading = {}
+                contentScale = ContentScale.Crop
             )
         }
 

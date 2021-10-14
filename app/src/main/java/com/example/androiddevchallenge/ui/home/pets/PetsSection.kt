@@ -1,6 +1,7 @@
 package com.example.androiddevchallenge.ui.home.pets
 
 import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -17,12 +18,13 @@ import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import coil.compose.rememberImagePainter
 import com.example.androiddevchallenge.R
 import com.example.androiddevchallenge.ui.common.PetHeader
 import com.example.androiddevchallenge.ui.home.ui.TitleSection
 import com.example.androiddevchallenge.utils.PuppyDataManager
 import com.example.androiddevchallenge.utils.ThemedPreview
-import dev.chrisbanes.accompanist.coil.CoilImage
+
 
 @Composable
 fun PetSection(pets: List<Pet>, navigateToDetail: (Pet) -> Unit) {
@@ -62,12 +64,11 @@ fun PetItem(pet: Pet, onClick: () -> Unit) {
                 distance = pet.distance,
                 isFavourite = pet.isFavourite
             )
-            CoilImage(
-                data = pet.images.first(),
+            Image(
+                painter= rememberImagePainter( pet.images.first()),
                 contentDescription = null,
                 modifier = Modifier.height(150.dp),
-                contentScale = ContentScale.Crop,
-                loading = {}
+                contentScale = ContentScale.Crop
             )
         }
     }

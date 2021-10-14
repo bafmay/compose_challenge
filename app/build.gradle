@@ -9,12 +9,12 @@ plugins {
 }
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 31
 
     defaultConfig {
         applicationId "com.example.androiddevchallenge"
         minSdkVersion 23
-        targetSdkVersion 30
+        targetSdkVersion 31
         versionCode 1
         versionName "1.0"
 
@@ -89,15 +89,16 @@ dependencies {
     implementation(Libs.AndroidX.Compose.constraintLayout)
 
     implementation(Libs.Dagger.hiltAndroid)
-    implementation(Libs.Dagger.hiltViewModel)
+
     implementation(Libs.Dagger.hiltNavigation)
     kapt(Libs.Dagger.daggerCompiler)
     kapt(Libs.Dagger.hiltCompiler)
 
-    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.0'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.1'
     implementation(Libs.Accompanist.coil)
     implementation(Libs.Accompanist.insets)
-    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.0'
+    implementation(Libs.Accompanist.coilImage)
+//    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.0-rc01'
 
     testImplementation(Libs.Test.jUnit)
 

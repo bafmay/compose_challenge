@@ -53,7 +53,7 @@ fun MainBottomNavigation(
         backgroundColor = Color.White,
     ) {
         val navBackStackEntry by navController.currentBackStackEntryAsState()
-        val currentRoute = navBackStackEntry?.arguments?.getString(KEY_ROUTE)
+        val currentRoute = navBackStackEntry?.destination?.route
         sections.forEach { section ->
             BottomNavigationItem(
                 icon = { Icon(imageVector = section.icon, contentDescription = "") },

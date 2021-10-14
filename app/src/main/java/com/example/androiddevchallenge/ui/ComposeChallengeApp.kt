@@ -11,7 +11,7 @@ import com.example.androiddevchallenge.ui.onboarding.OnBoardingScreen
 import com.example.androiddevchallenge.ui.pet.PetDetailScreen
 import com.example.androiddevchallenge.utils.Routes
 import com.example.androiddevchallenge.utils.hiltNavGraphViewModel
-import dev.chrisbanes.accompanist.insets.ProvideWindowInsets
+import com.google.accompanist.insets.ProvideWindowInsets
 
 @ExperimentalMaterialApi
 @Composable

@@ -18,7 +18,8 @@ import com.example.androiddevchallenge.ui.home.ui.CustomAppBar
 import com.example.androiddevchallenge.ui.home.ui.SearchSection
 import com.example.androiddevchallenge.ui.theme.MyTheme
 import com.example.androiddevchallenge.utils.PuppyDataManager
-import dev.chrisbanes.accompanist.insets.statusBarsPadding
+import com.google.accompanist.insets.statusBarsPadding
+
 
 @Composable
 fun HomeScreen(
